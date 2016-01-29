@@ -1,0 +1,103 @@
+.stripe {
+	position: relative;
+
+	&&--halfcircle::after {
+		content: "";
+		position: absolute;
+		z-index: 2;
+		bottom: -50px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 140px;
+		height: 140px;
+		border-radius: 50%;
+		clip: rect(75px, auto, auto, auto);
+		background-repeat: no-repeat;
+		background-position: 50% 75px;
+		background-size: 65px 50px;
+	}
+
+	&&--halfcircle-blue::after {
+		background-color: @blue;
+		background-image: url("../img/icons/icon-family.svg");
+	}
+
+	&&--blue {
+		background-color: @blue;
+		@media @mobile {
+			width: 100%;
+			min-width: 750px;
+		}
+	}
+
+	&&--mid-pic {
+		@media @desktop {
+			background: #FFB971 url(../img/bg/bg-mid--desktop@1x.jpg) no-repeat 50% 0;
+			background-size: cover;
+      @media @retina2x {
+        background: #FFB971 url("../img/bg/bg-mid--desktop@2x.jpg") no-repeat 50% 0;
+        background-size: cover;
+      }
+		}
+
+		@media @resize {
+			background: #FFB971 url("../img/bg/bg-mid--resize.jpg") no-repeat 50% 0;
+      background-size: cover;
+		}
+	}
+
+	&&--bottom-pic {
+		padding: 150px 0 45px;
+		@media @desktop {
+			background: #FF9000 url(../img/bg/bg-bottom@1x.jpg) no-repeat 50% 0;
+			background-size: cover;
+
+      @media @retina2x {
+        background: #FF9000 url("../img/bg/bg-bottom@2x.jpg") no-repeat 50% 0;
+        background-size: cover;
+      }
+		}
+
+		@media @resize {
+			background: #FF9000 url("../img/bg/bg-bottom--resize.jpg") no-repeat 50% 0;
+      background-size: cover;
+		}
+	}
+}
+
+.content-wrapper {
+	position: relative;
+	border-left: 1px solid red;
+	border-right: 1px solid red;
+	@media @desktop {
+		width: @screen--lg;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	@media @mobile {
+		width: @screen--sm;
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+	margin: 0 auto;
+
+	&&--top-mobile {
+		@media @mobile {
+			width: 750px;
+			padding: 0;
+		}
+	}
+
+	&&--darkgray {
+		background-color: @gray--darker;
+	}
+
+	&&--darkgray-padded {
+		padding-top: 35px;
+		padding-bottom: 40px;
+		@media @mobile {
+			padding-top: 40px;
+			padding-bottom: 25px;
+		}
+	}
+}

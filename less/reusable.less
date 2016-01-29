@@ -1,0 +1,106 @@
+.hidden {
+	display: none;
+}
+
+.mob-hidden {
+	@media @mobile {
+		display: none;
+	}
+}
+
+.mobile-only {
+  @media @desktop {
+    display: none;
+  }
+  @media @resize {
+    display: none;
+  }
+  @media @mobile {
+    display: block;
+  }
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.to-left {
+	float: left;
+}
+
+.to-right {
+	float: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.ib {
+	list-style: none;
+	padding-left: 0;
+	font-size: 0;
+
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__item&__item--vab {
+		vertical-align: bottom;
+	}
+
+	&__item&__item--vat {
+		vertical-align: top;
+	}
+}
+
+/* A universal class, used whenever we need to replace a <ul> construction with any other block element;
+	--desktop and other modifiers adjust it to the required grid configurations, while its default display
+	value is block */
+.ib-wrapper {
+	display: block;
+
+	&&--desktop {
+		@media @desktop {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	&&--resize {
+		@media @resize {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	&&--mobile {
+		@media @mobile {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}
+
+.font-normal {
+	font-weight: 400;
+}

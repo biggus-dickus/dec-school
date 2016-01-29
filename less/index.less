@@ -1,0 +1,172 @@
+.intro {
+
+	&__wrapper {
+		box-sizing: border-box;
+		min-height: 600px;
+		padding: 100px 460px 5px 60px;
+		background: url("../img/bg/lollypop.png") 100% 100% no-repeat;
+		background-size: 200px 520px;
+		@media @retina2x {
+			background: url("../img/bg/lollypop@2x.png") 100% 100% no-repeat;
+			background-size: 200px 520px;
+		}
+	}
+
+	&__header {
+		margin-bottom: 45px;
+		font-size: 45px;
+		line-height: 45px;
+		font-weight: 400;
+	}
+
+	&__text {
+		margin-top: 0;
+		font-size: @text-base;
+		font-weight: 300;
+		line-height: 1.3em;
+		color: @text-gray;
+	}
+}
+
+.program {
+
+	&__title-wrapper {
+		padding: 55px 0 45px;
+		text-align: center;
+		color: @white;
+		background: url("../img/bg/bg-mid--desktop@1x.jpg") 50% 50% no-repeat;
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 25px;
+		text-transform: uppercase;
+		font-size: @h2;
+		letter-spacing: 2px;
+		line-height: @h2;
+		font-weight: 100;
+	}
+
+	&__subtitle {
+		display: block;
+		font-size: 42px;
+		font-weight: 300;
+	}
+
+	&__item-wrapper {
+		padding-top: 60px;
+		text-align: center;
+	}
+
+	&__item {
+		box-sizing: border-box;
+		max-width: 49%;
+		padding: 0 10px;
+	}
+
+	&__bg {
+		display: block;
+		width: 144px;
+		height: 144px;
+		margin: 0 auto 15px;
+		overflow: hidden;
+		background-image: url("../img/icons/sprites/index-icons.svg");
+		background-repeat: no-repeat;
+	}
+
+	&__bg--excursion {
+		background-position: 0 -82px;
+	}
+
+	&__bg--test {
+		background-position: 0 -708px;
+	}
+
+	&__bg--consultation {
+		background-position: 0 -505px;
+	}
+
+	&__bg--personal-plan {
+		background-position: 0 -361px;
+	}
+
+	&__item-title {
+		margin-top: 0;
+		margin-bottom: 15px;
+		font-size: @h3 - 2;
+		line-height: @h3 - 2;
+		font-weight: 300;
+	}
+
+	&__item-description {
+		padding: 0 20px;
+		margin-top: 0;
+		margin-bottom: 60px;
+		font-size: @text-base;
+		font-weight: 300;
+		color: @text-gray;
+	}
+
+	&__comfort-study {
+		padding: 35px 130px 30px;
+		margin: 0;
+		text-align: center;
+		font-size: 32px;
+		font-weight: 300;
+		color: @white;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+}
+
+.about {
+
+	&__title-wrapper {
+		padding: 115px 0 120px;
+		background: url("../img/bg/about@1x.jpg") 50% 50% no-repeat;
+	}
+
+	&__title {
+		margin: 0;
+		font-size: @h2;
+		line-height: @h2;
+		letter-spacing: 2px;
+		font-weight: 100;
+		text-transform: uppercase;
+		text-align: center;
+		color: @white;
+	}
+
+	&__description-header {
+		padding-left: 60px;
+		margin-top: @h3 - 5;
+		margin-bottom: @h3 - 15;
+		font-size: @h3;
+		line-height: @h3;
+		font-weight: 300;
+	}
+
+	&__description-wrapper {
+		padding: 0 565px 45px 60px;
+		background: url("../img/bg/boy.png") no-repeat 100% 100%;
+		background-size: 617px 630px;
+	}
+
+	&__description-text {
+		font-size: @text-base;
+		color: @text-gray;
+	}
+
+	&__description-text:last-child {
+		margin-bottom: 0;
+	}
+
+	&__description-text&__description-text--highlighted {
+		color: @blue;
+	}
+
+	&__digits-header {
+		padding-top: 35px;
+		padding-bottom: 20px;
+	}
+}

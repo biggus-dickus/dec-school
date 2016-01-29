@@ -1,0 +1,176 @@
+.page-header {
+  position: relative;
+  min-height: 515px;
+  @media @desktop {
+    background: #eee url("../img/bg/bg-header--desktop@1x.jpg") no-repeat 50% 0;
+    background-size: cover;
+    @media @retina2x {
+      background: #eee url("../img/bg/bg-header--desktop@2x.jpg") no-repeat 50% 0;
+      background-size: cover;
+    }
+  }
+  @media @resize {
+    min-height: 385px;
+    background: #eee url("../img/bg/bg-header--resize.jpg") no-repeat 50% 0;
+  }
+  @media @mobile {
+    width: 100%;
+    min-width: 750px;
+    min-height: 570px;
+    background: #eee url("../img/bg/bg-header--mobile@1x.jpg") no-repeat 50% 70%;
+    background-size: cover;
+    @media @retina2x {
+      background: #eee url("../img/bg/bg-header--mobile@2x.jpg") no-repeat 50% 70%;
+      background-size: cover;
+    }
+  }
+
+  &__stripe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  &__logo {
+    display: block;
+    min-width: 86px;
+    height: 136px;
+    background: url("../img/logos/header-logo.svg") no-repeat 50% 50%;
+    background-size: cover;
+    text-indent: @over9000;
+  }
+
+  &__title {
+    margin: 0;
+    padding-left: 40px;
+    font-weight: 400;
+    color: @black;
+
+    @media @desktop {
+      max-width: 925px;
+      font-size: @h1;
+      line-height: @h1;
+    }
+    @media @resize {
+      max-width: 850px;
+      font-size: @h1 - 5;
+      line-height: @h1 - 5;
+    }
+    @media @mobile {
+      max-width: 530px;
+      font-size: @h1 + 3;
+      line-height: @h1 + 3;
+    }
+  }
+
+  &__badge {
+    box-sizing: border-box;
+    text-align: center;
+    color: @white;
+
+    @media @desktop {
+      position: absolute;
+      top: -280px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      width: 450px;
+      height: 165px;
+      padding: 25px 30px 10px 30px;
+      overflowY: hidden;
+      font-size: @badge-text;
+      background-color: @blue;
+    }
+
+    @media @resize {
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      width: 450px;
+      height: 165px;
+      padding: 25px 30px 10px 30px;
+      overflowY: hidden;
+      font-size: @badge-text - 4;
+      background-color: @blue;
+    }
+
+    @media @mobile {
+      position: relative;
+      padding: 30px 0 40px;
+      font-size: @badge-text + 4;
+    }
+  }
+
+  &__badge-holder {
+    position: relative;
+    background-color: @blue;
+    @media @mobile {
+      width: 100%;
+      min-width: 750px;
+    }
+  }
+
+  &__badge-holder::after {
+    @media @mobile {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      border: 30px solid @blue;
+      border-bottom: 0;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__badge-header {
+    margin: 0;
+    font-weight: 400;
+    @media @desktop {
+      font-size: @badge-header;
+    }
+    @media @resize {
+      font-size: @badge-header - 4;
+    }
+    @media @mobile {
+      font-size: @badge-header + 6;
+    }
+  }
+
+  &__badge-pic-holder {
+    position: relative;
+  }
+
+  &__badge-new {
+    position: absolute;
+    text-indent: @over9000;
+    z-index: 2;
+    @media @desktop {
+      right: -49px;
+      bottom: -48px;
+      width: 156px;
+      height: 104px;
+      background: url("../img/decorations/new-badge--desktop.png") 0 0 no-repeat;
+    }
+    @media @resize {
+      right: -49px;
+      bottom: -48px;
+      width: 156px;
+      height: 104px;
+      background: url("../img/decorations/new-badge--desktop.png") 0 0 no-repeat;
+    }
+    @media @mobile {
+      top: -74px;
+      left: 18px;
+      width: 191px;
+      height: 122px;
+      background: url("../img/decorations/new-badge--mob.png") 0 0 no-repeat;
+    }
+  }
+}
