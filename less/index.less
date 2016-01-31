@@ -29,12 +29,13 @@
 }
 
 .program {
+	background-color: #f2f0e6;
 
 	&__title-wrapper {
 		padding: 55px 0 45px;
 		text-align: center;
 		color: @white;
-		background: url("../img/bg/bg-mid--desktop@1x.jpg") 50% 50% no-repeat;
+		background: #9F641E url("../img/bg/bg-mid--desktop@1x.jpg") 50% 50% no-repeat;
 	}
 
 	&__title {
@@ -93,8 +94,8 @@
 	&__item-title {
 		margin-top: 0;
 		margin-bottom: 15px;
-		font-size: @h3 - 2;
-		line-height: @h3 - 2;
+		font-size: @h3 - 3;
+		line-height: @h3 - 3;
 		font-weight: 300;
 	}
 
@@ -123,7 +124,7 @@
 
 	&__title-wrapper {
 		padding: 115px 0 120px;
-		background: url("../img/bg/about@1x.jpg") 50% 50% no-repeat;
+		background: #805451 url("../img/bg/about@1x.jpg") 50% 50% no-repeat;
 	}
 
 	&__title {
@@ -148,8 +149,12 @@
 
 	&__description-wrapper {
 		padding: 0 565px 45px 60px;
-		background: url("../img/bg/boy.png") no-repeat 100% 100%;
+		background: url("../img/bg/mah-boi.png") no-repeat 100% 100%;
 		background-size: 617px 630px;
+		@media @retina2x {
+			background: url("../img/bg/mah-boi@2x.png") no-repeat 100% 100%;
+			background-size: 617px 630px;
+		}
 	}
 
 	&__description-text {
@@ -168,5 +173,71 @@
 	&__digits-header {
 		padding-top: 35px;
 		padding-bottom: 20px;
+	}
+
+	&__digits-wrapper {
+		max-width: 1040px;
+		padding-top: 80px;
+		margin: 0 auto;
+	}
+
+	&__digits-figure {
+		width: 33%;
+		margin-bottom: 70px;
+		font-size: 40px;
+		font-weight: 300;
+		line-height: 40px;
+		color: @text-gray;
+	}
+
+	&__digits-figure span {
+		display: block;
+		font-size: 124px;
+		font-weight: 100;
+		line-height: 124px;
+		letter-spacing: -5px;
+		color: @blue;
+	}
+
+	&__schools-header {
+		padding-top: 35px;
+		padding-bottom: 40px;
+	}
+
+	&__schools-map {
+		background: #dedede url("../img/bg/map.jpg") no-repeat 50% 50%;
+		background-size: cover;
+	}
+
+	&__schools-wrapper {
+		max-width: 1040px;
+		padding-top: 95px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&__schools-dpt {
+		box-sizing: border-box;
+		width: 33%;
+		margin-bottom: 115px;
+		text-align: left;
+	}
+
+	&__schools-district {
+		margin-top: 0;
+		margin-bottom: 25px;
+		font-size: 35px;
+		font-weight: 300;
+	}
+
+	&__schools-address {
+		padding-top: 22px;
+		padding-left: 75px;
+		font-size: 20px;
+		font-weight: 300;
+		color: @text-gray;
+		background-image: url(../img/icons/sprites/index-icons.svg);
+		background-repeat: no-repeat;
+		background-position: 0 -296px;
 	}
 }
