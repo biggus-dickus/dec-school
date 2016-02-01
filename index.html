@@ -3,8 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Приглашаем на дни открытых дверей в DEC school. В начале каждого семестра мы радушно принимаем юных и взрослых студентов, которым интересно изучение английского в Киеве с комфортом и по настоящей британской методике.">
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Дни открытых дверей в DEC school</title>
 </head>
@@ -44,7 +46,9 @@
         <h2 class="intro__header">Английский,<br>
         который любят дети</h2>
         <p class="intro__text">
-          <strong>Сеть Британских языковых школ DEC school приглашает детей и&nbsp;родителей на&nbsp;день открытых дверей 27&nbsp;февраля.</strong> <br>
+          <strong>Сеть Британских языковых школ DEC school приглашает детей и&nbsp;родителей на&nbsp;день открытых дверей 27&nbsp;февраля.</strong>
+        </p>
+        <p class="intro__text">
           Для гостей мы&nbsp;проведем экскурсию по&nbsp;школам, протестируем и&nbsp;определим уровень английского и&nbsp;предоставим исчерпывающие консультации по&nbsp;всем вопросам обучения.
         </p>
       </div>
@@ -96,7 +100,7 @@
 
 
 
-  <section class="about">
+  <section class="about  mob-hidden">
     <div class="about__title-wrapper">
       <h2 class="about__title">О нас</h2>
     </div>
@@ -146,27 +150,28 @@
       <h2 class="about__schools-header  about__title">Наши школы</h2>
     </div>
 
-    <div class="about__schools-map">
+    <div class="about__schools-map  mob-hidden">
       <div class="content-wrapper">
         <ul class="ib  about__schools-wrapper">
           <li class="ib__item  ib__item--vat  about__schools-dpt">
-            <h3 class="about__schools-district">DEC school на&nbsp;Оболони</h3>
-            <p class="about__schools-address">Оболонская наб., 19, корп. 3</p>
+            <h3 class="about__schools-district">Оболонь</h3>
+            <p class="about__schools-address">Оболонская наб., 19,<br>
+            корп. 3</p>
           </li>
           <li class="ib__item  ib__item--vat  about__schools-dpt">
-            <h3 class="about__schools-district">DEC school на&nbsp;Осокорках</h3>
+            <h3 class="about__schools-district">Осокорки</h3>
             <p class="about__schools-address">Днепровская наб., 19а</p>
           </li>
           <li class="ib__item  ib__item--vat  about__schools-dpt">
-            <h3 class="about__schools-district">DEC school в&nbsp;Голосеево</h3>
+            <h3 class="about__schools-district">Голосеево</h3>
             <p class="about__schools-address">Ул.&nbsp;Ломоносова, 73в, оф.&nbsp;57 (ЖК &laquo;Сонячна брама&raquo;)</p>
           </li>
           <li class="ib__item  ib__item--vat  about__schools-dpt">
-            <h3 class="about__schools-district">DEC school на&nbsp;Печерске</h3>
+            <h3 class="about__schools-district">Печерск</h3>
             <p class="about__schools-address">Ул.&nbsp;Подвысоцкого, 16</p>
           </li>
           <li class="ib__item  ib__item--vat  about__schools-dpt">
-            <h3 class="about__schools-district">DEC school на&nbsp;Лукьяновке</h3>
+            <h3 class="about__schools-district">Лукьяновка</h3>
             <p class="about__schools-address">Ул.&nbsp;Сечевых Стрельцов, 42</p>
           </li>
         </ul>
@@ -176,18 +181,119 @@
 
 
 
-  <section>
-    <h2 class="stripe stripe--blue">Предпродажа курсов открыта!</h2>
+  <section class="presale">
+    <h2 class="presale__title  stripe stripe--blue  mob-hidden">Предпродажа курсов открыта!</h2>
+    <div class="presale__wrapper">
+      <div class="content-wrapper">
+        <h3 class="presale__subtitle">Начало занятий&nbsp;&mdash; 1&nbsp;марта</h3>
+        <p class="presale__lead">Количество мест ограничено. Поспешите!</p>
+        <p class="presale__text">
+          До&nbsp;27&nbsp;февраля у&nbsp;вас есть возможность пройти тестирование и&nbsp;записаться на&nbsp;курс английского по&nbsp;специальной цене.
+        </p>
+        <button class="btn-custom  btn-custom--blue" type="button" data-toggle="modal" data-target="#reg">Записаться на&nbsp;тестирование</button>
+      </div>
+    </div>
   </section>
 
+  <section class="registration">
+    <div class="content-wrapper">
+      <h2 class="registration__title">Регистрация</h2>
+      <p class="registration__text">
+        Записывайтесь на&nbsp;день открытых дверей в&nbsp;DEC school<br>
+        <strong>по&nbsp;телефону (044) 390-76-24</strong><br>
+        или онлайн.
+      </p>
+      <button class="btn-custom  btn-custom--yellow" type="button" data-toggle="modal" data-target="#reg">
+        записаться на&nbsp;день<br>
+        открытых дверей
+      </button>
+    </div>
+  </section>
 
+  <footer class="contacts">
+    <div class="content-wrapper">
+      <h2 class="contacts__title">Контакты</h2>
+      <p class="contacts__text">Дополнительная информация и&nbsp;консультации:</p>
+      <p class="contacts__text">
+        (044) 390-76-24,<br>
+        <a href="mailto:info@dec-school.com">info@dec-school.com</a>
+      </p>
+      <a class="sn sn--fb" href="https://www.facebook.com/school.dec" target="_blank" title="Мы на Facebook">Мы на Facebook</a>
+      <a class="sn sn--yt" href="https://www.youtube.com/channel/UCR8PxBXXlZJYZPioRBpRfhg" target="_blank" title="Мы на YouTube">Мы на YouTube</a>
+    </div>
+  </footer>
 
+   <div id="reg" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLabelReg" aria-hidden="true">
+     <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+           <h4 id="modalLabelReg" class="form__title">Регистрация на&nbsp;день открытых дверей в&nbsp;DEC school</h4>
+         </div>
+         <div class="modal-body">
+           <div class="row row--center">
+             <div id="messageContainer" class="col-sm-11 col--ib">
 
+              <form id="lp_form" name="lp_form" action="/forms/lp" method="post" class="form">
+                <div class="form-group">
+                  <label class = "control-label" for="fio_parent">
+                    ФИО родителя <span class="asterisk-required">*</span>
+                  </label>
+                  <input name="fio_parent" class="form-control" type="text" id="fio_parent" required></div>
+                <div class="form-group">
+                  <label class = "control-label" for="email">
+                    E-mail родителя <span class="asterisk-required">*</span>
+                  </label>
+                  <input name="email" class="form-control" type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                  <label class = "control-label" for="phone">
+                    Телефон родителя <span class="asterisk-required">*</span>
+                  </label>
+                  <input name="phone" data-inputmask = "'alias': '+3(xxx)xxx-xx-xx'" class="form-control" placeholder="+38(ХХХ)ХХХ-XХ-XX" type="phone" id="phone" required>
+                </div>
+                <div class="form-group">
+                  <label class = "control-label" for="birth_date">
+                    Дата рождения студента <span class="asterisk-required">*</span>
+                  </label>
+                  <input name="birth_date" data-inputmask = "'alias': 'ДД.ММ.ГГГГ'" class="form-control" type="text" id="birth_date" placeholder="ДД.ММ.ГГГГ" required>
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="where">Откуда вы узнали о DEC school?</label>
+                  <select name="where" class="form-control" id="where">
+                    <option value="null">&nbsp;</option>
+                    <option>Ученик школы DEC school</option>
+                    <option>Клиент агентства DEC education / лагеря DEC camp</option>
+                    <option>Интернет</option>
+                    <option>Реклама на борде / тролле</option>
+                    <option>Реклама в лифте / в подъезде</option>
+                    <option>Радио</option>
+                    <option>Листовка от промоутера</option>
+                    <option>Посоветовали друзья</option>
+                    <option id="myVariant">Свой вариант</option>
+                  </select>
+                </div>
+                <div id="customFieldContainer" class="form-group hidden">
+                  <label class="control-label" for="where_other">Напишите ваш вариант</label>
+                  <input id="where_other" name="where_other" class="form-control" type="text">
+                </div>
+                <input type="submit" id="send_lp" class="button-default  pull-right  has-spinner" value="Отправить">
+              </form>
 
+             </div>
+           </div>
+         </div>
+         <div class="modal-footer">
+           <button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+         </div>
+       </div>
+     </div>
+   </div>
 
-<footer>
-
-</footer>
+  <script src="lib/jquery-1.11.3.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
+  <script src="lib/components.min.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>

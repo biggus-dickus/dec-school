@@ -1,7 +1,3 @@
-.hidden {
-	display: none;
-}
-
 .mob-hidden {
 	@media @mobile {
 		display: none;
@@ -54,6 +50,10 @@
 	text-align: right;
 }
 
+.font-normal {
+	font-weight: 400;
+}
+
 .ib {
 	list-style: none;
 	padding-left: 0;
@@ -101,6 +101,14 @@
 	}
 }
 
-.font-normal {
-	font-weight: 400;
+/* Bootstrap customization */
+
+.row.row--center {
+	text-align: center;
+}
+
+div[class^="col-"].col--ib {
+	display: inline-block;
+  float: none;
+  vertical-align: top;
 }

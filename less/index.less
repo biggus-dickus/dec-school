@@ -21,6 +21,7 @@
 
 	&__text {
 		margin-top: 0;
+		margin-bottom: 0.3em;
 		font-size: @text-base;
 		font-weight: 300;
 		line-height: 1.3em;
@@ -125,6 +126,14 @@
 	&__title-wrapper {
 		padding: 115px 0 120px;
 		background: #805451 url("../img/bg/about@1x.jpg") 50% 50% no-repeat;
+		@media @retina2x {
+			background: #805451 url("../img/bg/about@2x.jpg") 50% 50% no-repeat;
+			background-size: cover;
+		}
+		@media @resize {
+			background: #805451 url("../img/bg/about--resize.jpg") 50% 50% no-repeat;
+			background-size: cover;
+		}
 	}
 
 	&__title {
@@ -219,25 +228,135 @@
 	&__schools-dpt {
 		box-sizing: border-box;
 		width: 33%;
-		margin-bottom: 115px;
+		margin-bottom: 105px;
 		text-align: left;
 	}
 
 	&__schools-district {
 		margin-top: 0;
-		margin-bottom: 25px;
+		margin-bottom: 35px;
 		font-size: 35px;
 		font-weight: 300;
 	}
 
 	&__schools-address {
-		padding-top: 22px;
-		padding-left: 75px;
+		position: relative;
+		padding-left: 80px;
 		font-size: 20px;
 		font-weight: 300;
 		color: @text-gray;
-		background-image: url(../img/icons/sprites/index-icons.svg);
+	}
+
+	&__schools-address::before {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		top:-20px;
+		left: -5px;
+		width: 63px;
+		height: 58px;
+		background-image: url("../img/icons/sprites/index-icons.svg");
 		background-repeat: no-repeat;
-		background-position: 0 -296px;
+		background-position: 0 -303px;
+	}
+}
+
+.presale {
+
+	&__title {
+		padding: 25px 0 30px;
+		margin: 0;
+		text-align: center;
+		font-size: @h2;
+		font-weight: 400;
+		color: @white;
+	}
+
+	&__wrapper {
+		padding-top: 50px;
+		padding-bottom: 60px;
+		background: #ddd url("../img/bg/bg-bottom.jpg") 50% 0 no-repeat;
+		background-size: cover;
+		text-align: center;
+	}
+
+	&__subtitle {
+		position: relative;
+		display: inline-block;
+		max-width: 1100px;
+		padding-left: 90px;
+		margin-top: 0;
+		margin-bottom: 25px;
+		font-size: 57px;
+		font-weight: 600;
+		color: @blue;
+
+		@media @mobile {
+			width: auto;
+			padding: 0;
+		}
+	}
+
+	&__subtitle::before {
+		content: "";
+		position: absolute;
+		top: -15px;
+		left: 0;
+		width: 66px;
+		height: 82px;
+		background: url("../img/icons/sprites/index-icons.svg") no-repeat 0 0;
+
+		@media @mobile {
+			left: -45px;
+		}
+	}
+
+	&__lead {
+		padding: 0 250px;
+		margin-top: 0;
+		margin-bottom: 30px;
+		font-size: @h3;
+		line-height: @h3;
+
+		@media @mobile {
+			padding: 0;
+		}
+	}
+
+	&__text {
+		margin-top: 0;
+		margin-bottom: 30px;
+		font-size: @text-base;
+		padding: 0 215px;
+
+		@media @mobile {
+			padding: 0;
+		}
+	}
+}
+
+.registration {
+	padding: 55px 0 65px;
+	text-align: center;
+	background: @blue url("../img/bg/pattern.png") 0 0 repeat;
+
+	&__title {
+		margin: 0;
+		text-align: center;
+		font-size: @h2;
+		font-weight: 400;
+		color: @white;
+	}
+
+	&__text {
+		padding: 0 100px;
+		margin-bottom: 85px;
+		font-size: @h3;
+
+		@media @mobile {
+			padding: 0;
+			font-size: @h3 * 0.7;
+			margin-bottom: 50px;
+		}
 	}
 }

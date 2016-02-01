@@ -1,0 +1,58 @@
+.btn-custom {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 345px;
+  max-width: 350px;
+  border: 0;
+  padding: 20px 15px;
+  text-align: center;
+  font-weight: 300;
+  box-shadow: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  outline: 0;
+  transition: background-color 0.2s linear;
+
+  &&--blue {
+    font-size: @text-base - 3;
+    color: @white;
+    background-color: @blue;
+  }
+
+  &&--blue:hover {
+    background-color: darken(@blue, 15%);
+  }
+
+  &&--yellow {
+    font-size: @text-base;
+    line-height: @text-base;
+    color: @black;
+    background-color: @yellow;
+  }
+
+  &&--yellow:hover {
+    background-color: darken(@yellow, 10%);
+  }
+}
+
+.button-default {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid #5A6CA8;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: @white;
+  background-color: #4C62AD;
+  transition: background-color 0.15s linear;
+
+  &:hover {
+    color: @purpleish;
+    background: transparent;
+  }
+}
+
+
