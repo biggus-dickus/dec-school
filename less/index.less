@@ -13,6 +13,7 @@
 	}
 
 	&__header {
+		margin: 0;
 		margin-bottom: 45px;
 		font-size: 45px;
 		line-height: 45px;
@@ -20,7 +21,7 @@
 	}
 
 	&__text {
-		margin-top: 0;
+		margin: 0;
 		margin-bottom: 0.3em;
 		font-size: @text-base;
 		font-weight: 300;
@@ -37,11 +38,12 @@
 		text-align: center;
 		color: @white;
 		background: #9F641E url("../img/bg/bg-mid--desktop@1x.jpg") 50% 50% no-repeat;
+		background-size: cover;
 	}
 
 	&__title {
 		margin-top: 0;
-		margin-bottom: 25px;
+		margin-bottom: 15px;
 		text-transform: uppercase;
 		font-size: @h2;
 		letter-spacing: 2px;
@@ -52,7 +54,7 @@
 	&__subtitle {
 		display: block;
 		font-size: 42px;
-		font-weight: 300;
+		font-weight: 400;
 	}
 
 	&__item-wrapper {
@@ -105,6 +107,7 @@
 		margin-top: 0;
 		margin-bottom: 60px;
 		font-size: @text-base;
+		line-height: @text-base + 5;
 		font-weight: 300;
 		color: @text-gray;
 	}
@@ -124,10 +127,10 @@
 .about {
 
 	&__title-wrapper {
-		padding: 115px 0 120px;
-		background: #805451 url("../img/bg/about@1x.jpg") 50% 50% no-repeat;
+		padding: 110px 0 115px;
+		background: #805451 url("../img/bg/about@1x.jpg") 50% 0 no-repeat;
 		@media @retina2x {
-			background: #805451 url("../img/bg/about@2x.jpg") 50% 50% no-repeat;
+			background: #805451 url("../img/bg/about@2x.jpg") 50% 0 no-repeat;
 			background-size: cover;
 		}
 		@media @resize {
@@ -157,7 +160,7 @@
 	}
 
 	&__description-wrapper {
-		padding: 0 565px 45px 60px;
+		padding: 0 500px 45px 60px;
 		background: url("../img/bg/mah-boi.png") no-repeat 100% 100%;
 		background-size: 617px 630px;
 		@media @retina2x {
@@ -167,7 +170,9 @@
 	}
 
 	&__description-text {
+		margin-bottom: @text-base + 4;
 		font-size: @text-base;
+		line-height: 1.3em;
 		color: @text-gray;
 	}
 
@@ -176,12 +181,13 @@
 	}
 
 	&__description-text&__description-text--highlighted {
+		padding-right: 10%;
 		color: @blue;
 	}
 
 	&__digits-header {
 		padding-top: 35px;
-		padding-bottom: 20px;
+		padding-bottom: 25px;
 	}
 
 	&__digits-wrapper {
@@ -251,7 +257,7 @@
 		content: "";
 		position: absolute;
 		z-index: 1;
-		top:-20px;
+		top:-15px;
 		left: -5px;
 		width: 63px;
 		height: 58px;
@@ -268,7 +274,7 @@
 		margin: 0;
 		text-align: center;
 		font-size: @h2;
-		font-weight: 400;
+		font-weight: 300;
 		color: @white;
 	}
 
@@ -324,9 +330,10 @@
 	}
 
 	&__text {
-		margin-top: 0;
+		margin: 0;
 		margin-bottom: 30px;
 		font-size: @text-base;
+		line-height: @text-base + 4;
 		padding: 0 215px;
 
 		@media @mobile {
@@ -338,20 +345,24 @@
 .registration {
 	padding: 55px 0 65px;
 	text-align: center;
-	background: @blue url("../img/bg/pattern.png") 0 0 repeat;
+	background: @blue url("../img/bg/pattern.png") 0 -15px repeat;
 
 	&__title {
 		margin: 0;
+		margin-bottom: 30px;
 		text-align: center;
 		font-size: @h2;
+		line-height: @h2;
 		font-weight: 400;
 		color: @white;
 	}
 
 	&__text {
 		padding: 0 100px;
+		margin: 0;
 		margin-bottom: 85px;
 		font-size: @h3;
+		line-height: @h3;
 
 		@media @mobile {
 			padding: 0;

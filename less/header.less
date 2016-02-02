@@ -1,4 +1,4 @@
-.page-header {
+.index-header {
   position: relative;
   min-height: 515px;
   @media @desktop {
@@ -50,12 +50,10 @@
     color: @black;
 
     @media @desktop {
-      max-width: 925px;
       font-size: @h1;
       line-height: @h1;
     }
     @media @resize {
-      max-width: 850px;
       font-size: @h1 - 5;
       line-height: @h1 - 5;
     }
@@ -80,8 +78,8 @@
       width: 450px;
       height: 165px;
       padding: 25px 30px 10px 30px;
-      overflowY: hidden;
       font-size: @badge-text;
+      line-height: @badge-text + 3;
       background-color: @blue;
     }
 
@@ -94,8 +92,8 @@
       width: 450px;
       height: 165px;
       padding: 25px 30px 10px 30px;
-      overflowY: hidden;
       font-size: @badge-text - 4;
+      line-height: @badge-text;
       background-color: @blue;
     }
 
@@ -103,6 +101,7 @@
       position: relative;
       padding: 30px 0 40px;
       font-size: @badge-text + 4;
+      line-height: @badge-text + 4;
     }
   }
 
@@ -132,6 +131,7 @@
   &__badge-header {
     margin: 0;
     font-weight: 400;
+    line-height: 1.3em;
     @media @desktop {
       font-size: @badge-header;
     }
