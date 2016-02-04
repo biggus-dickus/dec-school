@@ -12,6 +12,18 @@
 </head>
 <body>
 
+  <!-- Google Tag Manager -->
+  <noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-P2W24R" height="0" width="0" style="display:none; visibility:hidden"></iframe>
+  </noscript>
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P2W24R');
+  </script>
+  <!-- End Google Tag Manager -->
+
+
   <header class="index-header">
     <div class="index-header__stripe">
       <div class="content-wrapper  content-wrapper--top-mobile">
@@ -100,7 +112,7 @@
 
 
 
-  <section class="about  mob-hidden">
+  <section class="about">
     <div class="about__title-wrapper">
       <h2 class="about__title">О нас</h2>
     </div>
@@ -150,33 +162,7 @@
       <h2 class="about__schools-header  about__title">Наши школы</h2>
     </div>
 
-    <div class="about__schools-map  mob-hidden">
-      <div class="content-wrapper">
-        <ul class="ib  about__schools-wrapper">
-          <li class="ib__item  ib__item--vat  about__schools-dpt">
-            <h3 class="about__schools-district">Оболонь</h3>
-            <p class="about__schools-address">Оболонская наб., 19,<br>
-            корп. 3</p>
-          </li>
-          <li class="ib__item  ib__item--vat  about__schools-dpt">
-            <h3 class="about__schools-district">Осокорки</h3>
-            <p class="about__schools-address">Днепровская наб., 19а</p>
-          </li>
-          <li class="ib__item  ib__item--vat  about__schools-dpt">
-            <h3 class="about__schools-district">Голосеево</h3>
-            <p class="about__schools-address">Ул.&nbsp;Ломоносова, 73в, оф.&nbsp;57 (ЖК &laquo;Сонячна брама&raquo;)</p>
-          </li>
-          <li class="ib__item  ib__item--vat  about__schools-dpt">
-            <h3 class="about__schools-district">Печерск</h3>
-            <p class="about__schools-address">Ул.&nbsp;Подвысоцкого, 16</p>
-          </li>
-          <li class="ib__item  ib__item--vat  about__schools-dpt">
-            <h3 class="about__schools-district">Лукьяновка</h3>
-            <p class="about__schools-address">Ул.&nbsp;Сечевых Стрельцов, 42</p>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <div id="map" class="about__schools-map"></div>
   </section>
 
 
@@ -238,6 +224,8 @@
 
               <form id="dod_form" name="dod_form" action="/forms/lp" method="post" class="form" role="form" data-toggle="validator">
                 <input type="hidden" name="came_from" value="Registration for 27.02.2016">
+                <input type="hidden" name="dod_date" value="27.02.2016">
+                <input type="hidden" name="school" value="DEC school на Лукьяновке">
                 <div class="form-group">
                   <label class = "control-label" for="fio_parent">
                     ФИО родителя
@@ -257,7 +245,8 @@
                     Телефон родителя
                     <span class="asterisk-required">*</span>
                   </label>
-                  <input type="tel" pattern="+38\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" name="phone" class="form-control" placeholder="+38 ХХХ ХХХ XХ XX" id="phone" required>
+                  <input type="tel" pattern="\+38\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" name="phone" class="form-control" placeholder="+38 ХХХ ХХХ XХ XX" id="phone" required data-error="Пожалуйста, укажите номер телефона в международном формате (+38 ХХХ ХХХ XХ XX).">
+                  <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
                   <label class = "control-label" for="birth_date">
@@ -311,6 +300,7 @@
   <script src="lib/bootstrap.min.js"></script>
   <script src="lib/components.min.js"></script>
   <script src="js/script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3yyVRadW62rZ0DfHM8JbL7wKl6-9ZAZQ&callback=initMap"></script>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -333,7 +323,6 @@
     var google_remarketing_only = true;
     /* ]]>*/
   </script>
-  <script src="//www.googleadservices.com/pagead/conversion.js"></script>
   <noscript>
   <div style="display:inline;">
     <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/998211159/?value=0&amp;guid=ON&amp;script=0">
