@@ -4,6 +4,10 @@
   color: @white;
   background-color: @gray--darker;
 
+  @media @mobile {
+    padding: 60px 0 50px;
+  }
+
   &__title {
     margin-top: 0;
     margin-bottom: 30px;
@@ -15,10 +19,19 @@
     font-size: @h3 - 3;
     line-height: 1.3em;
     margin: 0;
+
+    @media @mobile {
+      font-size: @h3 - 12;
+      margin-bottom: @h3 - 10;
+    }
   }
 
   &__text:last-of-type {
     margin-bottom: @h3;
+
+    @media @mobile {
+      margin-bottom: @h3 + 5;
+    }
   }
 }
 

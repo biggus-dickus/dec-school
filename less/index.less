@@ -10,14 +10,25 @@
 			background: url("../img/bg/lollypop@2x.png") 100% 100% no-repeat;
 			background-size: 200px 520px;
 		}
+		@media @mobile {
+			min-height: auto;
+			padding: 55px 0 40px;
+			background: transparent;
+		}
 	}
 
 	&__header {
 		margin: 0;
-		margin-bottom: 45px;
-		font-size: 45px;
-		line-height: 45px;
+		margin-bottom: @h3;
+		font-size: @h3;
+		line-height: @h3;
 		font-weight: 400;
+
+		@media @mobile {
+			margin-bottom: floor(@h3 * 0.8);
+			font-size: floor(@h3 * 0.8);
+			line-height: floor(@h3 * 0.85);
+		}
 	}
 
 	&__text {
@@ -27,6 +38,12 @@
 		font-weight: 300;
 		line-height: 1.3em;
 		color: @text-gray;
+
+		@media @mobile {
+			margin-bottom: 0.5em;
+			font-size: floor(@text-base * 0.9);
+			font-weight: 300;
+		}
 	}
 }
 
@@ -39,6 +56,12 @@
 		color: @white;
 		background: #9F641E url("../img/bg/bg-mid--desktop@1x.jpg") 50% 50% no-repeat;
 		background-size: cover;
+
+		@media @mobile {
+			padding: 45px 0 35px;
+			background: #9F641E url("../img/bg/bg-mid--resize.jpg") 50% 50% no-repeat;
+			background-size: cover;
+		}
 	}
 
 	&__title {
@@ -49,12 +72,22 @@
 		letter-spacing: 2px;
 		line-height: @h2;
 		font-weight: 100;
+
+		@media @mobile {
+			font-size: @h2 * 0.7;
+			letter-spacing: 1px;
+			line-height: @h2 * 0.75;
+		}
 	}
 
 	&__subtitle {
 		display: block;
-		font-size: 42px;
+		font-size: @h3 - 3;
 		font-weight: 400;
+
+		@media @mobile {
+			font-size: @h3 * 0.75;
+		}
 	}
 
 	&__item-wrapper {
@@ -66,6 +99,25 @@
 		box-sizing: border-box;
 		max-width: 49%;
 		padding: 0 10px;
+
+		@media @mobile {
+			max-width: none;
+			padding: 0;
+		}
+
+		&:nth-child(1) {
+			float: left;
+			@media @mobile {
+				float: none;
+		  }
+		}
+
+		&:nth-child(2) {
+			float: right;
+			@media @mobile {
+				float: none;
+		  }
+		}
 	}
 
 	&__bg {
@@ -121,6 +173,11 @@
 		color: @white;
 		text-transform: uppercase;
 		letter-spacing: 1px;
+
+		@media @mobile {
+			padding: 30px 0 25px;
+			font-size: @text-base;
+		}
 	}
 }
 
@@ -137,6 +194,11 @@
 			background: #805451 url("../img/bg/about--resize.jpg") 50% 50% no-repeat;
 			background-size: cover;
 		}
+		@media @mobile {
+			padding: 90px 0 95px;
+			background: #805451 url("../img/bg/about--resize.jpg") 50% 50% no-repeat;
+			background-size: cover;
+		}
 	}
 
 	&__title {
@@ -148,6 +210,11 @@
 		text-transform: uppercase;
 		text-align: center;
 		color: @white;
+
+		@media @mobile {
+			font-size: floor(@h2 * 0.8);
+			line-height: floor(@h2 * 0.8);
+		}
 	}
 
 	&__description-header {
@@ -157,15 +224,28 @@
 		font-size: @h3;
 		line-height: @h3;
 		font-weight: 300;
+
+		@media @mobile {
+			padding-left: 0;
+			margin-bottom: floor(@h3 * 0.8);
+			font-size: floor(@h3 * 0.8);
+			line-height: floor(@h3 * 0.9);
+		}
 	}
 
 	&__description-wrapper {
 		padding: 0 500px 45px 60px;
 		background: url("../img/bg/mah-boi.png") no-repeat 100% 100%;
 		background-size: 617px 630px;
+
 		@media @retina2x {
 			background: url("../img/bg/mah-boi@2x.png") no-repeat 100% 100%;
 			background-size: 617px 630px;
+		}
+
+		@media @mobile {
+			padding: 0;
+			background: transparent;
 		}
 	}
 
@@ -174,15 +254,27 @@
 		font-size: @text-base;
 		line-height: 1.3em;
 		color: @text-gray;
+		@media @mobile {
+			margin-bottom: @text-base;
+			font-size: floor(@text-base * 0.9);
+		}
 	}
 
 	&__description-text:last-child {
 		margin-bottom: 0;
+
+		@media @mobile {
+			margin-bottom: @text-base + 10;
+		}
 	}
 
 	&__description-text&__description-text--highlighted {
 		padding-right: 10%;
 		color: @blue;
+
+		@media @mobile {
+			padding-right: 0;
+		}
 	}
 
 	&__digits-header {
@@ -194,6 +286,12 @@
 		max-width: 1040px;
 		padding-top: 80px;
 		margin: 0 auto;
+
+		@media @mobile {
+			padding-top: 40px;
+			max-width: none;
+			margin: 0;
+		}
 	}
 
 	&__digits-figure {
@@ -203,6 +301,12 @@
 		font-weight: 300;
 		line-height: 40px;
 		color: @text-gray;
+
+		@media @mobile {
+			width: 33.3333%;
+			font-size: floor(@text-base * 0.9);
+			line-height: @text-base;
+		}
 	}
 
 	&__digits-figure span {
@@ -212,6 +316,12 @@
 		line-height: 124px;
 		letter-spacing: -5px;
 		color: @blue;
+
+		@media @mobile {
+			font-size: 56px;
+			line-height: 56px;
+			letter-spacing: -2px;
+		}
 	}
 
 	&__schools-header {
@@ -220,8 +330,6 @@
 	}
 
 	&__schools-map {
-		/*background: #dedede url("../img/bg/map.jpg") no-repeat 50% 50%;*/
-		/*background-size: cover;*/
 		height: 675px;
 		background-color: #dedede;
 	}
@@ -278,6 +386,11 @@
 		font-size: @h2;
 		font-weight: 300;
 		color: @white;
+
+		@media @mobile {
+			font-size: floor(@h2 * 0.8);
+			line-height: floor(@h2 * 0.8);
+		}
 	}
 
 	&__wrapper {
@@ -301,7 +414,9 @@
 
 		@media @mobile {
 			width: auto;
-			padding: 0;
+			padding-left: 30px;
+			font-size: @h3;
+			line-height: 1.3em;
 		}
 	}
 
@@ -328,6 +443,7 @@
 
 		@media @mobile {
 			padding: 0;
+			font-size: @text-base + 10;
 		}
 	}
 
