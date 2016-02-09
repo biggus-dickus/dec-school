@@ -46,14 +46,36 @@
 		}
 
 		&--marked {
+			position: relative;
+			padding-left: 125px;
 			margin-top: 0.75em;
+			font-weight: 600;
 			color: @blue;
+		}
+
+		&--marked::before {
+			content: "Акция!";
+			position: absolute;
+			left: -40px;
+			top: 8px;
+			padding: 0 10px;
+			font-size: @text-base + 4;
+			font-weight: 400;
+			line-height: @text-base * 2;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: #fff;
+			background-color: #e3000b;
 		}
 
 		&--small {
 			margin: 1em 0;
 			text-align: right;
 			font-size: @text-base * 0.55;
+
+			@media @mobile {
+				font-size: @text-base * 0.5;
+			}
 		}
 	}
 }
