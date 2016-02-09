@@ -61,24 +61,21 @@
 }
 
 .content-wrapper {
-	border-left: 1px solid red;
-	border-right: 1px solid red;
 	position: relative;
 	@media @desktop {
 		width: @screen--lg;
 		padding-left: 10px;
 		padding-right: 10px;
+		margin: 0 auto;
 	}
 	@media @mobile {
-		width: @screen--sm;
-		padding-left: 70px;
-		padding-right: 70px;
+		box-sizing: border-box;
+		padding-right: 9.33%;
+		padding-left: 9.33%;
 	}
-	margin: 0 auto;
 
 	&&--top-mobile {
 		@media @mobile {
-			width: 750px;
 			padding: 0;
 		}
 	}

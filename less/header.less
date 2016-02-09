@@ -14,8 +14,6 @@
     background: #eee url("../img/bg/bg-header--resize.jpg") no-repeat 50% 0;
   }
   @media @mobile {
-    width: 100%;
-    min-width: 750px;
     min-height: 570px;
     background: #eee url("../img/bg/bg-header--mobile@1x.jpg") no-repeat 50% 70%;
     background-size: cover;
@@ -36,16 +34,22 @@
 
   &__logo {
     display: block;
-    min-width: 86px;
+    float: left;
+    width: 86px;
     height: 136px;
+    margin-right: 40px;
     background: url("../img/logos/header-logo.svg") no-repeat 50% 50%;
     background-size: cover;
     text-indent: @over9000;
+
+    @media @mobile {
+      margin-right: 35px;
+    }
   }
 
   &__title {
+    padding: 35px 0;
     margin: 0;
-    padding-left: 40px;
     font-weight: 400;
     color: @black;
 
@@ -54,13 +58,14 @@
       line-height: @h1;
     }
     @media @resize {
-      font-size: @h1 - 5;
-      line-height: @h1 - 5;
+      font-size: @h1 - 6;
+      line-height: @h1 - 6;
     }
     @media @mobile {
-      max-width: 660px;
-      font-size: @h1 + 3;
-      line-height: @h1 + 3;
+      padding: 20px 0;
+      font-size: @h1;
+      line-height: @h1;
+      margin-bottom: 15px;
     }
   }
 
@@ -108,10 +113,6 @@
   &__badge-holder {
     position: relative;
     background-color: @blue;
-    @media @mobile {
-      width: 100%;
-      min-width: 750px;
-    }
   }
 
   &__badge-holder::after {
