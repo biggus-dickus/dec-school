@@ -13,6 +13,12 @@
   outline: 0;
   transition: background-color 0.2s linear;
 
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+
   &&--blue {
     font-size: @text-base - 3;
     color: @white;
